@@ -10,7 +10,14 @@
  * @return {number}
  */
 var removeDuplicates = function(nums) {
-    
+    let tag;
+    for(let i = nums.length - 1;i >= 0 ;i--) {
+        if(tag === nums[i]) {
+            nums.splice(i, 1);
+        }else {
+            tag = nums[i]
+        }
+    }
 };
 // @lc code=end
 
